@@ -36,13 +36,14 @@ public class Soup {
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
         int number = (int) Math.random()*(letters.length());
-        return letters.charAt(number)
+        return letters.charAt(number);
     }
 
 
     //returns the letters currently stored with the company name placed directly in the center of all
     //the letters
     public String companyCentered(){
+        int middle = (letters.length()/2);
         return "";
     }
 
