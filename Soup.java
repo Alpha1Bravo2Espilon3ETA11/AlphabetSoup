@@ -44,18 +44,18 @@ public class Soup {
     //the letters
     public String companyCentered(){
         int middle = (letters.length()/2);
-        return "";
+        return letters.substring(0, middle)+company+letters.substring(middle);
     }
 
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
-    public void removeFirstVowel(){
-        
+    public void removeFirstVowel(int num){
+        letters = letters.replaceFirst("[AEIOUaeiou]", "");
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
-
+        letters = letters.substring(randomLetter());
     }
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
